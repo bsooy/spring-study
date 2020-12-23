@@ -8,6 +8,9 @@
     <bean id="memberDao" class="spring.MemberDao">
     </bean>
     
+    <bean id="memberPrinter" class="spring.MemberPrinter">
+    </bean>
+    
     <bean id="memberPrinter1" class="spring.MemberPrinter">
         <qualifier value="sysout"/>
     </bean>

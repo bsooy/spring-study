@@ -1,13 +1,10 @@
 package spring;
 
 import java.util.Date;
-import javax.annotation.Resource;
 
 public class MemberRegisterService {
-	@Resource(name="memberDao")
 	private MemberDao memberDao;
 	
-	//@Autowired(required=false)
 	public MemberRegisterService(MemberDao memberDao) {
 		this.memberDao = memberDao;
 	}
