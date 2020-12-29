@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+ <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:aop="http://www.springframework.org/schema/aop"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -8,16 +8,22 @@
     http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- 공통 기능을 제공할 틀래스를 빈으로 등록 -->
-    <bean id="exeTimeAspect" class="aspect.ExeTimeAspect"></bean>
+    <!-- <bean id="exeTimeAspect" class="aspect.ExeTimeAspect"></bean> -->
+    
+    
+    <aop:aspectj-autoproxy/>
+    
+    <bean id="exeTiemAspect" class="aspect.ExeTimeAspect2"/>
+    
     
     <!-- Aspect 설정 : Advice를 어떤 Pointcut에 적용할 지 설정 -->
-    <aop:config>
+    <!-- <aop:config>
         <aop:aspect id="measureAspect" ref="exeTimeAspect"> 
-            <aop:pointcut id="publicMethod" expression="execution(public * chap07 ..*(..))"/> <!-- => 애들 사용 될때 -->
-            <aop:around pointcut-ref="publicMethod" method="measure"/> <!-- => 애를 호출 때 advice에 따라 -->
+            <aop:pointcut id="publicMethod" expression="execution(public * chap07 ..*(..))"/> => 애들 사용 될때
+            <aop:around pointcut-ref="publicMethod" method="measure"/> => 애를 호출 때 advice에 따라
         </aop:aspect>
     </aop:config>
-    
+     -->
     <bean id="impeCal" class="chap07.ImpeCalculator">
     </bean>
     
