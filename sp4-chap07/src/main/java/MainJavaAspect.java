@@ -10,6 +10,8 @@ public class MainJavaAspect {
 		Calculator recCal = ctx.getBean("recCal", Calculator.class);
 		long fiveFact = recCal.factorial(5);
 		System.out.println("recCal.factorial(5) = " + fiveFact);
+		System.out.println("recCal.factorial(5) = " + fiveFact);
+		System.out.println("recCal.factorial(5) = " + fiveFact);
 	}
 
 }
